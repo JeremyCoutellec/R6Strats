@@ -1,4 +1,4 @@
-# r6_companion
+# R6Strats
 
 A new Flutter project.
 
