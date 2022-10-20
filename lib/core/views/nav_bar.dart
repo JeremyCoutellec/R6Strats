@@ -10,7 +10,7 @@ class NarBar extends AppBar {
       : super(
             leading: Image.asset('images/r6companionLogo.png'),
             title: const Text(
-              'R6 Companion',
+              'R6 Strats Builder',
             ),
             backgroundColor: Theme.of(context).colorScheme.secondary,
             bottom: TabBar(

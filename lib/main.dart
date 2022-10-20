@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     const secondaryColor = Color.fromRGBO(211, 195, 176, 1);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'R6 Companion',
+      title: 'R6 Strats builder',
       theme: ThemeData(
         // COLORS
         primaryColor: primaryColor,
