@@ -1,0 +1,937 @@
+[
+    {
+        "name": "Grim",
+        "description": "Vous l'attendiez et le voilà : le lanceur de ruches Kawan ! Chaque projectile libère une nuée de bots qui tracent la localisation des adversaires qui la traversent. Évitez tout contact avec les yeux.",
+        "cover": "images/agents/attackers/GrimCover.png",
+        "icon": "images/agents/attackers/GrimLogo.png",
+        "roles": [
+            "intelGatherer",
+            "areaDenial"
+        ],
+        "side": "attackers",
+        "health": "low",
+        "speed": "high"
+    },
+    {
+        "name": "Sens",
+        "description": "Le système de projection R.O.U roule après avoir été lancé par Sens et envoie de petits projecteurs pour créer un écran suivant ses pas. Si les objets physiques peuvent quand même traverser l'écran, il est très adaptable et peut bloquer plusieurs lignes de mire à la fois.",
+        "cover": "images/agents/attackers/SensCover.png",
+        "icon": "images/agents/attackers/SensLogo.png",
+        "roles": [
+            "coveringFire",
+            "areaDenial",
+            "crowdControl"
+        ],
+        "side": "attackers",
+        "health": "high",
+        "speed": "low"
+    },
+    {
+        "name": "Azami",
+        "description": "La Barrière Kiba est un kunai modifié qui s'accroche aux surfaces une fois lancé et génère un matériau qui se diffuse et se transforme en barrière blindée pour combler les trous de votre défense.",
+        "cover": "images/agents/defenders/AzamiCover.png",
+        "icon": "images/agents/defenders/AzamiLogo.png",
+        "roles": [
+            "areaDenial"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle"
+    },
+    {
+        "name": "Thorn",
+        "description": "Après avoir été lancé, le Rasopulseur s'accroche à une surface. Peu après avoir détecté un adversaire à proximité, il propulse automatiquement plusieurs lames tranchantes dans toutes les directions, ce qui en fait un gadget des plus mortels.",
+        "cover": "images/agents/defenders/ThornCover.png",
+        "icon": "images/agents/defenders/ThornLogo.png",
+        "roles": [
+            "anchor",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle"
+    },
+    {
+        "name": "Osa",
+        "description": "Le bouclier transparent et blindé Talon-8 peut être transporté par Osa ou déployé au sol et sur les cadres de fenêtre, lui offrant ainsi une ligne de mire protégée tandis qu'elle établit une stratégie d'attaque.",
+        "cover": "images/agents/attackers/OsaCover.png",
+        "icon": "images/agents/attackers/OsaLogo.png",
+        "roles": [
+            "intelGatherer",
+            "areaDenial",
+            "antiRoam"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle"
+    },
+    {
+        "name": "Thunderbird",
+        "description": "Lorsqu'elle est déployée au sol, la Station Kóna devient un endroit sûr pour les agents blessés ou mis à terre. Ils n'ont qu'à s'approcher du gadget, et la Station Kóna augmentera naturellement les PV de l'agent ou le ranimera.",
+        "cover": "images/agents/defenders/ThunderbirdCover.png",
+        "icon": "images/agents/defenders/ThunderbirdLogo.png",
+        "roles": [
+            "secure",
+            "roam",
+            "buff"
+        ],
+        "side": "defenders",
+        "health": "slow",
+        "speed": "high"
+    },
+    {
+        "name": "Flores",
+        "description": "Commandée à distance, la charge RCE-Ratero part en avant tandis que Flores cherche un emplacement pour la faire exploser. Une fois déclenchée, la charge RCE-Ratero s'accroche à la surface la plus proche, se couvre d'une carapace blindée et explose, détruisant ainsi les gadgets et les murs destructibles à proximité.",
+        "cover": "images/agents/attackers/FloresCover.png",
+        "icon": "images/agents/attackers/FloresLogo.png",
+        "roles": [
+            "softBreach",
+            "disable",
+            "areaDenial",
+            "backLine"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle"
+    },
+    {
+        "name": "Aruni",
+        "description": "Une fois en place, le portail projette un rayon laser capable de détecter le moindre mouvement qui le traverse. Lorsqu'un intru est détecté, l'énergie émise par le laser augmente drastiquement, causant des brûlures au second et au troisième degré. Nous avons passé près d'une heure à jeter divers objets à travers le portail, que ce soit des liasses de papier ou des morceaux des fruits, pour enfin trouver le paramétrage qui causerait le plus de dégâts tout en consommant le moins d'énergie.",
+        "cover": "images/agents/defenders/AruniCover.png",
+        "icon": "images/agents/defenders/AruniLogo.png",
+        "roles": [
+            "secure",
+            "intelGatherer",
+            "anchor"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle"
+    },
+    {
+        "name": "Zero",
+        "description": "Les renseignements sont la base de toute attaque réussie, et Zero en est pleinement conscient. Son lanceur Argus est équipé d'un type spécial de caméras qui peuvent percer les surfaces destructibles et renforcées pour surveiller les deux côtés. Oui, ces caméras peuvent couvrir deux angles à la fois et vous permettent donc d'espionner l'équipe adverse. Les caméras Argus ont une autre fonctionnalité : un rayon laser à usage unique, parfait pour détruire des éléments clés des défenses de l'ennemi ou pour attirer l'attention en dehors des goulots d'étranglement.",
+        "cover": "images/agents/attackers/ZeroCover.png",
+        "icon": "images/agents/attackers/ZeroLogo.png",
+        "roles": [
+            "intelDenier",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle"
+    },
+    {
+        "name": "Ace",
+        "description": "Avec l'Aqua-Sapeur S.E.L.M.A., c'est l'eau qui prend le pouvoir. Ce gadget utilise la pression hydraulique pour briser les surfaces renforcées et destructibles. Le cylindre se colle là où Ace l'envoie et il se déploie. Il n'entraîne qu'une seule explosion au sol, au plafond ou sur une trappe, mais s'il se colle à un mur et qu'il dispose d'assez d'espace, le S.E.L.M.A. enchaîne jusqu'à deux séquences explosives. Chacune de ses explosions laisse un trou béant dans le mur, pour au final obtenir une brèche suffisamment grande pour qu'un agent puisse s'y engouffrer.",
+        "cover": "images/agents/attackers/AceCover.png",
+        "icon": "images/agents/attackers/AceLogo.png",
+        "roles": [
+            "frontLine",
+            "hardBreach"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Melusi",
+        "description": "Le gadget Banshee peut être déployé sur n'importe quelle surface, à l'instar de l'Evil Eye de Maestro, mais il opère de façon totalement autonome. Dès qu'un ennemi entre dans son rayon d'action, il émet un son et ralentit sa progression. Il peut être détruit, bien sûr, mais comme il résiste aux balles, les assaillants devront faire appel à des utilitaires ou s'approcher pour le frapper.",
+        "cover": "images/agents/defenders/MelusiCover.png",
+        "icon": "images/agents/defenders/MelusiLogo.png",
+        "roles": [
+            "frontLine",
+            "hardBreach"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "low"
+    },
+    {
+        "name": "Oryx",
+        "description": "Le Sprint Remah lui permet de patrouiller efficacement et de couvrir de courtes distances avec une rapidité sans égale. Il peut également être utilisé pour étourdir les adversaires et sprinter à traverser les murs destructibles, ce qui crée une ouverture. Attention toutefois, car il perd de la santé à chaque fois que le Sprint Remah est utilisé pour détruire un mur. En outre, Oryx dispose de la capacité unique d'interagir avec les trappes cassées. Il peut passer à travers pour remonter pour une rotation rapide ou se suspendre au bord pour jeter un coup d'oeil ou attendre le parfait moment pour monter. Tant qu'il est suspendu, il peut également choisir de redescendre si l'ascension semble trop dangereuse.",
+        "cover": "images/agents/defenders/OryxCover.png",
+        "icon": "images/agents/defenders/OryxLogo.png",
+        "roles": [
+            "roam",
+            "softBreach"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Iana",
+        "description": "Le Réplicateur Gemini est une copie holographique de Iana, contrôlée à distance. Elle peut se déplacer et émet des bruits comme elle le ferait, mais la copie ne peut tirer, attaquer au corps à corps ou utiliser de gadget. Sa durée est limitée et elle peut être désactivée à tout instant. Il y a toujours un temps de recharge entre deux utilisations, qui est plus long si la copie est détruite. Le Réplicateur sert principalement à leurrer les adversaires de Iana et à collecter des informations. Lors de son déploiement, elle peut trouver ses adversaires et instiller la confusion dans leur esprit. Si le Gemini est repéré et détruit, cela peut aider Iana à déterminer où se trouve la menace, mais son adversaire bénéficiera de précieuses secondes pour se repositionner.",
+        "cover": "images/agents/attackers/IanaCover.png",
+        "icon": "images/agents/attackers/IanaLogo.png",
+        "roles": [
+            "intelDenier",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Wamai",
+        "description": "Le système Mag-NET est un gadget adhésif à lancer. Il adhère aux surfaces et attend. Sa fonction est d'attirer le projectile d'un ennemi vers sa position, puis de s'autodétruire en faisant exploser ce projectile. De cette manière, Wamai peut non seulement neutraliser les grenades et projectiles des assaillants, mais aussi se servir d'un placement stratégique pour retourner ces projectiles contre eux.",
+        "cover": "images/agents/defenders/WamaiCover.png",
+        "icon": "images/agents/defenders/WamaiLogo.png",
+        "roles": [
+            "anchor",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Kali",
+        "description": "Pour parler de la lance explosive LV, il faut mentionner le fusil CSRX 300 de Kali. C'est une arme dangereuse qui peut percer les barricades et les trappes en un tir, et créer de gros trous dans les murs destructibles. La LV est montée sous le canon et peut être utilisée en même temps que la lunette du CSRX 300. Son rôle est de détruire les gadgets avec une explosion légère dans un périmètre défini. Lorsqu'elle est utilisée sur un mur destructible, elle crée un trou légèrement plus petit qu'un tir du fusil. Lorsqu'elle est tirée sur un mur renforcé en revanche, elle se loge simplement à sa surface.",
+        "cover": "images/agents/attackers/KaliCover.png",
+        "icon": "images/agents/attackers/KaliLogo.png",
+        "roles": [
+            "backLine",
+            "coveringFire",
+            "disable"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Amaru",
+        "description": "Le crochet Garra est un dispositif absolument exceptionnel. Grâce à lui, Amaru parvient à s'accrocher aux rebords et aux fenêtres pour s'y hisser en un temps record. Dorénavant, non seulement ses adversaires doivent faire attention aux attaques venant d'au-dessus, mais aussi à celles venant d'en dessous. Grâce au Garra, Amaru est le seul agent qui puisse monter par une trappe ouverte en plus de pouvoir en descendre. Avec le bon timing, il est possible de réaliser son célèbre Garra Kick en tirant le crochet sur une fenêtre : cela élimine directement un adversaire situé de l'autre côté de la fenêtre.",
+        "cover": "images/agents/attackers/AmaruCover.png",
+        "icon": "images/agents/attackers/AmaruLogo.png",
+        "roles": [
+            "flank",
+            "frontLine"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Goyo",
+        "description": "Tout comme les boucliers déployables ordinaires, le bouclier Volcán procure une couverture et permet aux défenseurs de bloquer le passage, mais Goyo pimente les choses avec une bombe incendiaire qui y est fixée. Vu de devant, pourtant, impossible de dire de quel type de bouclier il s'agit. Jusqu'à ce que quelqu'un tire sur la bombe pour la faire exploser, le bouclier fait obstacle aux assaillants.",
+        "cover": "images/agents/defenders/GoyoCover.png",
+        "icon": "images/agents/defenders/GoyoLogo.png",
+        "roles": [
+            "areaDenial",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Nokk",
+        "description": "Le HEL est un gant qui réduit les sorties de sons ambiants à l’activation et dissimule l’image de Nøkk sur les outils d’observations de l’ennemi. Ainsi, elle sera complètement indétectable par les drones, caméras blindées, Evil Eyes et autres, et elle pourra patrouiller sans être vue. De plus, ses pas ne produiront aucun bruit, lui permettant de traquer silencieusement les agents adverses. Désormais, les patrouilles des défenseurs seront plus risquées que jamais, car Nøkk se cachera peut-être derrière le moindre recoin… ou pire, juste derrière eux. Mais attention, le HEL ne peut être utilisé que pendant un intervalle limité, à la suite de quoi il devra prendre le temps de se recharger.",
+        "cover": "images/agents/attackers/NokkCover.png",
+        "icon": "images/agents/attackers/NokkLogo.png",
+        "roles": [
+            "flank",
+            "intelDenier"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "high"
+    },
+    {
+        "name": "Warden",
+        "description": "La fonction que remplit le Regard était quasiment inexistante chez les défenseurs. Tant qu’il est actif, Warden peut voir à travers la fumée et renverser le manque de renseignements infligé à son équipe. En activant ses Lunettes intelligentes, Warden peut également se protéger des effets aveuglants, ou recouvrer la vue pendant un aveuglement : cela lui permet de reprendre en main ces quelques secondes de danger. Toutefois, la vision thermique du Regard ne fonctionne que si Warden reste immobile. S'il bouge, il sera affecté par la fumée, comme les autres agents. Le Regard est un effet déclenché, il nécessite donc un temps de rechargement après chaque utilisation.",
+        "cover": "images/agents/defenders/WardenCover.png",
+        "icon": "images/agents/defenders/WardenLogo.png",
+        "roles": [
+            "anchor",
+            "intelDenier"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Mozzie",
+        "description": "L'arme de Mozzie, les « nuisibles », sont de minuscules robots quadrupèdes qui peuvent être utilisés pour cibler un drone, ou déployés dans une zone pour empêcher ce dernier d'y accéder. Une fois déployé, le nuisible s'accroche au drone ennemi le plus proche et entrave sa vision. Il initie ensuite une séquence de déblocage pour pirater le drone et permettre à Mozzie de le contrôler. Il peut ainsi recueillir des renseignements sur l'ennemi sans risquer de se faire pirater à son tour. Un nuisible ne peut être utilisé qu'une seule fois : une fois le drone ennemi piraté et contrôlé par Mozzie, le robot s'autodétruit et ne laisse aucune trace.",
+        "cover": "images/agents/defenders/MozzieCover.png",
+        "icon": "images/agents/defenders/MozzieLogo.png",
+        "roles": [
+            "intelDenier",
+            "intelGatherer",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Gridlock",
+        "description": "Les herses Trax sont une version portative qui, une fois lancée, déploie une rangée de pointes selon une trajectoire hexagonale, couvrant mieux les terrains accidentés qu'une herse traditionnelle déployée selon une trajectoire rectiligne. Une fois lancées, elles peuvent se déployer davantage et couvrir une plus grande surface. Grâce à cette capacité unique pour un assaillant, Gridlock peut se servir du Trax à la manière d'un obstacle pour redessiner la carte et contrôler une zone. Tout ennemi marchant dessus est ralenti et subit des dégâts. Les herses Trax peuvent être détruites par des tirs, des impacts ou des dégâts thermiques.",
+        "cover": "images/agents/attackers/GridlockCover.png",
+        "icon": "images/agents/attackers/GridlockLogo.png",
+        "roles": [
+            "antiRoam",
+            "areaDenial",
+            "crowdControl"
+        ],
+        "side": "attackers",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "low"
+    },
+    {
+        "name": "Nomad",
+        "description": "L'accessoire personnalisé de l'arme de Nomad lui permet de lancer des grenades répulsives de proximité. Nomad démarre la partie avec trois grenades de proximité. Ces dispositifs de répulsion sont non létaux, mais désorientent les adversaires.",
+        "cover": "images/agents/attackers/NomadCover.png",
+        "icon": "images/agents/attackers/NomadLogo.png",
+        "roles": [
+            "antiRoam",
+            "crowdControl",
+            "trap"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "high"
+    },
+    {
+        "name": "Kaid",
+        "description": "L'électrogriffe \"Rtila\" de Kaid peut électrifier les trappes et murs renforcés, les fils barbelés et les boucliers déployables, afin d'empêcher les ennemis de faire une brèche dans la Kasbah et de tous les bâtiments qu'il est chargé de protéger. Il arrive sur le champ de bataille équipé de deux exemplaires de ce gadget. Une fois accrochés à une surface, ils peuvent électrifier les objets métalliques situés dans un rayon de 0,75 mètre.",
+        "cover": "images/agents/defenders/KaidCover.png",
+        "icon": "images/agents/defenders/KaidLogo.png",
+        "roles": [
+            "anchor",
+            "antiHardBreach",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Clash",
+        "description": "Clash est le premier défenseur équipé d'un bouclier. Le bouclier AEE est son arme principale ; elle peut prendre son arme secondaire à tout instant, mais elle doit tout d'abord ranger son bouclier. Son bouclier blindé extensible peut ralentir les ennemis grâce à un générateur de champ chargé (GCC), qui émane directement du bouclier sous une forme cylindrique. Les adversaires pris dans le GCC peuvent également subir de faibles dégâts sur la durée. Un usage efficace du bouclier permet à Clash de bloquer les points d'entrée et de prévenir ou de ralentir les assauts ennemis.",
+        "cover": "images/agents/defenders/ClashCover.png",
+        "icon": "images/agents/defenders/ClashLogo.png",
+        "roles": [
+            "crowdControl",
+            "intelGatherer",
+            "secure",
+            "shield"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "high"
+    },
+    {
+        "name": "Maverick",
+        "description": "Le chalumeau \"fait maison\" de Maverick peut percer n'importe quelle surface, y compris les murs renforcés et les trappes. Il nécessite une poigne ferme et une certaine connaissance de l'environnement pour créer de petits trous et des lignes de vue. Maverick doit se tenir près de la surface choisie pour utiliser son gadget. Celui-ci ne fait presque pas de bruit, mais s'épuise rapidement. Néanmoins, la haute précision de ce gadget en fait un outil très créatif à utiliser, sans pour autant se reposer sur les technologies numériques.",
+        "cover": "images/agents/attackers/MaverickCover.png",
+        "icon": "images/agents/attackers/MaverickLogo.png",
+        "roles": [
+            "backLine",
+            "disable",
+            "flank",
+            "hardBreach"
+        ],
+        "side": "attackers",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Maestro",
+        "description": "Maestro utilise une tourelle télécommandée pour tirer de puissants rayons laser. Une fois qu'elle est fixée au sol ou à un mur, Maestro peut effectuer une surveillance à distance par le biais de sa caméra. Lorsque celle-ci s'ouvre pour tirer, son cœur devient vulnérable, mais le reste du temps, la tourelle est insensible aux balles et aux coups. Il est aussi à noter que l'Evil Eye permet de voir à travers la fumée.",
+        "cover": "images/agents/defenders/MaestroCover.png",
+        "icon": "images/agents/defenders/MaestroLogo.png",
+        "roles": [
+            "anchor",
+            "areaDenial",
+            "intelGatherer",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Alibi",
+        "description": "Le Prisme projette des hologrammes d'Alibi pour donner l'illusion qu'elle est inactive. Si vous tirez sur un hologramme ou que vous le touchez, vous serez marqué pendant quelques secondes. Si le Prisme est déployé à l'extérieur, un faux message \"Ennemi détecté à l'extérieur\" apparaît chez les assaillants. Pour ajouter un élément de surprise, le Prisme dissimule l'identité des défenseurs s'aventurant eux-mêmes à l'extérieur. Les balles, les coups et les explosifs peuvent endommager le Prisme, mais traverseront l'hologramme. Attention de ne pas vous tenir trop près.",
+        "cover": "images/agents/defenders/AlibiCover.png",
+        "icon": "images/agents/defenders/AlibiLogo.png",
+        "roles": [
+            "intelGatherer",
+            "intelDenier",
+            "roam",
+            "trap"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "high"
+    },
+    {
+        "name": "Lion",
+        "description": "Twitch lui a fourni un drone de surveillance lorsqu'il faisait partie du GIGN. Le EE-ONE-D aide Lion à maintenir les zones de quarantaine en détectant les mouvements dans une zone, lui offrant une vue d'ensemble sur les zones dangereuses ou sur le champ de bataille. Son drone peut rester indéfiniment dans les airs, mais il doit choisir le bon moment pour scanner la zone.",
+        "cover": "images/agents/attackers/LionCover.png",
+        "icon": "images/agents/attackers/LionLogo.png",
+        "roles": [
+            "antiRoam",
+            "backLine",
+            "crowdControl",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Finka",
+        "description": "La poussée d'adrénaline de Finka active des nanobots faits de zinc et déjà injectés dans le corps des agents. Ces nanobots relâchent un cocktail pharmaceutique dans leur sang, et le zinc est absorbé en tant que nutriment. Ces nanites augmentent temporairement la santé de son équipe, aident les alliés blessés et réduisent le recul. Elle est la seule personne capable de créer des nanites adaptés aux besoins spécifiques de chaque agent.",
+        "cover": "images/agents/attackers/FinkaCover.png",
+        "icon": "images/agents/attackers/FinkaLogo.png",
+        "roles": [
+            "backLine",
+            "buff"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Vigil",
+        "description": "Le calme mortel de Chul Kyung sur le terrain lui permet de compter sur son dispositif de dissimulation à rendu électronique (ERC-7) afin de ne pas se faire détecter. L'ERC-7 utilise une technologie de réalité diminuée pour retirer les stimuli perceptibles de son environnement direct. Vigil possède un prototype dans son sac à dos, qui lui permet d'analyser les appareils électroniques proches et de supprimer sa propre image sur les caméras alentour.",
+        "cover": "images/agents/defenders/VigilCover.png",
+        "icon": "images/agents/defenders/VigilLogo.png",
+        "roles": [
+            "intelDenier",
+            "roam"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "high"
+    },
+    {
+        "name": "Dokkaebi",
+        "description": "Grace utilise un ordinateur balistique blindé, nom de code Bombe logique, afin de pirater les équipements tactiques ennemis. Le programme transmet un virus de son invention qui peut contourner les pare-feu, allumer les appareils proches et émettre un son bruyant pour compromettre la position d'un ennemi.",
+        "cover": "images/agents/attackers/DokkaebiCover.png",
+        "icon": "images/agents/attackers/DokkaebiLogo.png",
+        "roles": [
+            "antiRoam",
+            "flank",
+            "intelDenier",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Zofia",
+        "description": "Le KS79 LIFELINE utilise une technologie de projectile déclenchée de façon électronique capable de tirer à la fois des munitions à impact et des munitions assourdissantes. Puisque plusieurs grenades sont superposées dans le canon, il n’est plus nécessaire de recharger l’arme, ce qui la rend extrêmement efficace. Les munitions assourdissantes émettent une onde de choc de 170 décibels qui perturbe l’ouïe et étourdit la cible. Les munitions à impact détruisent les murs en un instant. Préparez-vous à une attaque explosive.",
+        "cover": "images/agents/attackers/ZofiaCover.png",
+        "icon": "images/agents/attackers/ZofiaLogo.png",
+        "roles": [
+            "antiRoam",
+            "crowdControl",
+            "disable",
+            "flank",
+            "softBreach"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Ela",
+        "description": "Inspirées des grenades antichars polonaises de 1939, utilisées par les célèbres Cichociemni lors de la Seconde Guerre mondiale, les mines Grzmot peuvent être collées sur des surfaces et leur déclenchement assourdit et étourdit la cible. Ces mines offensives de proximité affectent tout le monde dans leur rayon d'effet.",
+        "cover": "images/agents/defenders/ElaCover.png",
+        "icon": "images/agents/defenders/ElaLogo.png",
+        "roles": [
+            "crowdControl",
+            "roam",
+            "trap"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "low"
+    },
+    {
+        "name": "Ying",
+        "description": "Inspiré du nouveau genre de grenades neutralisantes présenté par le Special Air Service, cet explosif fait de mercure et de magnésium crée une multitude de clignotements aveuglants. L’appareil Candela libère une série de clignotements qui peuvent soit être ancrés aux surfaces ou lancés comme grenades.",
+        "cover": "images/agents/attackers/YingCover.png",
+        "icon": "images/agents/attackers/YingLogo.png",
+        "roles": [
+            "crowdControl",
+            "frontLine"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Lesion",
+        "description": "Les mines Gu sont inspirées des pièges punji, utilisés lors de la guerre du Viêt Nam. Frottés avec des plantes toxiques ou des selles, les pieux servent à ralentir les troupes ennemies en leur causant de sévères infections. De même, les mines Gu injectent une toxine qui blesse vos adversaires et limite leur vitesse.",
+        "cover": "images/agents/defenders/LesionCover.png",
+        "icon": "images/agents/defenders/LesionLogo.png",
+        "roles": [
+            "anchor",
+            "crowdControl",
+            "intelGatherer",
+            "roam",
+            "trap"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Mira",
+        "description": "Un verre feuilleté spécialisé qui, lorsqu’il est déployé avec de l’oxyacétylène, peut créer un miroir d’observation sur n’importe quel mur. Toutefois, si la bonbonne d'air comprimé est détruite, le verre est éjecté et crée une ouverture audacieuse pour les défenseurs et les attaquants.",
+        "cover": "images/agents/defenders/MiraCover.png",
+        "icon": "images/agents/defenders/MiraLogo.png",
+        "roles": [
+            "anchor",
+            "intelGatherer",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "high"
+    },
+    {
+        "name": "Jackal",
+        "description": "Le modèle Eyenox III a été conçu pour offrir un dispositif de suivi mobile capable de suivre les empreintes d’une personne et de l’identifier en temps réel. Doté d’une vision artificielle avancée, le Eyenox détecte les détails invisibles relatifs à la foulée et à la répartition du poids afin que vous puissiez identifier et traquer votre cible.",
+        "cover": "images/agents/attackers/JackalCover.png",
+        "icon": "images/agents/attackers/JackalLogo.png",
+        "roles": [
+            "antiRoam",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "high"
+    },
+    {
+        "name": "Hibana",
+        "description": "Le \"X-KAIROS\" est un lance-grenades de calibre 40 mm projetant des plombs explosifs qu'il est ensuite possible de déclencher simultanément à distance. Infiltrez-vous de façon innovante en créant des lignes de vue ou de nouveaux passages !",
+        "cover": "images/agents/attackers/HibanaCover.png",
+        "icon": "images/agents/attackers/HibanaLogo.png",
+        "roles": [
+            "backLine",
+            "frontLine",
+            "hardBreach"
+        ],
+        "side": "attackers",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "low"
+    },
+    {
+        "name": "Echo",
+        "description": "Ce drone volant émet des décharges soniques étourdissant toutes les cibles d'un périmètre donné. Yokai transmet également un flux vidéo en temps réel permettant à Echo de sécuriser ses environs. Profitez de la puissance de la technologie avec un défenseur capable aussi bien de soutenir le siège que les patrouilleurs !",
+        "cover": "images/agents/defenders/EchoCover.png",
+        "icon": "images/agents/defenders/EchoLogo.png",
+        "roles": [
+            "anchor",
+            "crowdControl",
+            "intelGatherer",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "high"
+    },
+    {
+        "name": "Caveira",
+        "description": "Le \"Luison\" est recouvert d'une fibre composite partiellement minérale qui protège le silencieux et renforce ses effets insonorisants, ce qui permet à Caveira d'immobiliser sa cible discrètement et de l'interroger. Non seulement le \"Luison\" brille dans la neutralisation furtive, mais il permet aussi de s'assurer que personne ne prend la fuite.",
+        "cover": "images/agents/defenders/CaveiraCover.png",
+        "icon": "images/agents/defenders/CaveiraLogo.png",
+        "roles": [
+            "intelDenier",
+            "intelGatherer",
+            "roam"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "high"
+    },
+    {
+        "name": "Capitão",
+        "description": "Les carreaux en verre favorisent des assauts rapides et silencieux qui ne révèlent pas votre position. Leur cartouche se brise à l'impact et libère un gaz qui enflamme l'oxygène environnant.",
+        "cover": "images/agents/attackers/CapitaoCover.png",
+        "icon": "images/agents/attackers/CapitaoLogo.png",
+        "roles": [
+            "areaDenial",
+            "flank",
+            "frontLine"
+        ],
+        "side": "attackers",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Blackbeard",
+        "description": "De multiples couches de polycarbonate transparent et d'armure thermoplastique, recouvertes avec un bouclier et soutenues avec du verre ultra-léger. Protège l'Agent contre les coups de mêlée et les armes à feu.",
+        "cover": "images/agents/attackers/BlackbeardCover.png",
+        "icon": "images/agents/attackers/BlackbeardLogo.png",
+        "roles": [
+            "backLine",
+            "coveringFire",
+            "shield"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Valkyrie",
+        "description": "Encastrée dans une balle en silicone teintée et dotée de micro-ventouses, cette caméra à déploiement rapide permet de disposer d'une vision claire, grâce au gyroscope inclus et contrôlant l'angle de la lentille. Les ventouses permettent à la caméra de se fixer à n'importe quelle surface tandis que le gyroscope de la lentille permet de stabiliser son angle et sa mise au point. Le flux vidéo est accessible à tous les Agents de l'équipe.",
+        "cover": "images/agents/defenders/ValkyrieCover.png",
+        "icon": "images/agents/defenders/ValkyrieLogo.png",
+        "roles": [
+            "intelGatherer",
+            "roam"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Buck",
+        "description": "Un fusil à pompe de calibre 12 monté sous son arme, utilisé en association avec un fusil d'assaut. Le Passe-Partout permet à l'Agent d'alterner rapidement entre fusil d'assaut classique et fusil à pompe perceur.",
+        "cover": "images/agents/attackers/BuckCover.png",
+        "icon": "images/agents/attackers/BuckLogo.png",
+        "roles": [
+            "flank",
+            "softBreach"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Frost",
+        "description": "Composé d’un socle et de mâchoires métalliques, ce piège se déclenche, lorsqu'un ennemi pose le pied sur la plaque, deux séries de mâchoires se déploient à hauteur des chevilles et tibias, empêchant l'individu de s'échapper. La pression des mâchoires est telle qu’il est nécessaire d'être deux afin de desserrer les mâchoires et remettre le piège en place.",
+        "cover": "images/agents/defenders/FrostCover.png",
+        "icon": "images/agents/defenders/FrostLogo.png",
+        "roles": [
+            "crowdControl",
+            "trap"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Mute",
+        "description": "Antennes rétractables. L'appareil peut être fixé au sol. Écran numérique. Leviers d'activation.",
+        "cover": "images/agents/defenders/MuteCover.png",
+        "icon": "images/agents/defenders/MuteLogo.png",
+        "roles": [
+            "antiHardBreach",
+            "intelDenier",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Sledge",
+        "description": "Sledge crée de petites ouvertures et contourne les ennemis. Il excelle dans la création de nouvelles lignes de tir et de points d'entrée, mettant ainsi les défenseurs sous pression. Il peut créer une brèche dans les surfaces non renforcées grâce à son marteau de démolition tactique : Le Tronc.",
+        "cover": "images/agents/attackers/SledgeCover.png",
+        "icon": "images/agents/attackers/SledgeLogo.png",
+        "roles": [
+            "flank",
+            "softBreach"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Smoke",
+        "description": "Détonateur. Récepteur à distance. L'adhésif double face permet un placement vertical ou horizontal.",
+        "cover": "images/agents/defenders/SmokeCover.png",
+        "icon": "images/agents/defenders/SmokeLogo.png",
+        "roles": [
+            "anchor",
+            "areaDenial",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Thatcher",
+        "description": "La bobine en cuivre crée l'IEM en tournant. Jauge DEL. Tourner le dessus de 45 degrés pour activer l'appareil.",
+        "cover": "images/agents/attackers/ThatcherCover.png",
+        "icon": "images/agents/attackers/ThatcherLogo.png",
+        "roles": [
+            "backLine",
+            "disable"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Ash",
+        "description": "Ash est un agent rapide de première ligne, capable de s'infiltrer discrètement, de contourner l'ennemi ainsi que de détourner l'attention des défenseurs en quelques secondes. Ash est capable de s'infiltrer discrètement et à distance grâce à son M120 CREM modifié et ses munitions d'infiltration.",
+        "cover": "images/agents/attackers/AshCover.png",
+        "icon": "images/agents/attackers/AshLogo.png",
+        "roles": [
+            "disable",
+            "flank",
+            "frontLine",
+            "softBreach"
+        ],
+        "side": "attackers",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "low"
+    },
+    {
+        "name": "Castle",
+        "description": "Castle est un agent de sécurisation pouvant servir d'ancre, et capable de créer des forteresses défensives autour de l'objectif, afin de ralentir les assaillants. L'aptitude unique de Castle permet de créer des barricades renforcées en utilisant le panneau tactique universel UTP1.",
+        "cover": "images/agents/defenders/CastleCover.png",
+        "icon": "images/agents/defenders/CastleLogo.png",
+        "roles": [
+            "anchor",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Pulse",
+        "description": "Pulse est un patrouilleur et un agent de renseignements au service des défenseurs. Il peut traquer les assaillants à travers les murs grâce à son capteur cardiaque HB-5 et obtenir de précieuses informations sur leur position.",
+        "cover": "images/agents/defenders/PulseCover.png",
+        "icon": "images/agents/defenders/PulseLogo.png",
+        "roles": [
+            "intelGatherer",
+            "roam"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "high"
+    },
+    {
+        "name": "Montagne",
+        "description": "Se replie pour atteindre la moitié de sa taille, fournissant davantage de mobilité à son porteur. Composé d'alliages renforcés et de Kevlar. H16Protège contre le feu des armes de petit calibre et les attaques de combat rapproché.",
+        "cover": "images/agents/attackers/MontagneCover.png",
+        "icon": "images/agents/attackers/MontagneLogo.png",
+        "roles": [
+            "shield"
+        ],
+        "side": "attackers",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "high"
+    },
+    {
+        "name": "Twitch",
+        "description": "Twitch est la personne qu'il vous faut pour désactiver les dispositifs ennemis et récupérer des renseignements sur le terrain. Ses compétences s'avèrent très utiles pour soutenir l'équipe à distance pour mener l'assaut en créant des ouvertures. Twitch peut désactiver les dispositif ennemis à distance grâce à sa capacité spéciale : le DRONE DE CHOC DCR MODÈLE 1.",
+        "cover": "images/agents/attackers/TwitchCover.png",
+        "icon": "images/agents/attackers/TwitchLogo.png",
+        "roles": [
+            "backLine",
+            "disable",
+            "frontLine",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Doc",
+        "description": "Arme de poing à gâchette. Dose d'1 mg d'adrénaline, dans une solution physiologique. Le pistolet fonctionne avec une cartouche de CO2 pressurisé.",
+        "cover": "images/agents/defenders/DocCover.png",
+        "icon": "images/agents/defenders/DocLogo.png",
+        "roles": [
+            "anchor",
+            "buff"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "low"
+    },
+    {
+        "name": "Rook",
+        "description": "Rook est un agent de soutien qui excelle en défense. Il peut octroyer une protection supplémentaire aux défenseurs, ce qui leur confère un avantage non négligeable lors des échanges de tirs. Il peut se protéger et augmenter les chances de survie de ses coéquipiers à l'aide de sa capacité spéciale : l'armure R1N « Rhino ».",
+        "cover": "images/agents/defenders/RookCover.png",
+        "icon": "images/agents/defenders/RookLogo.png",
+        "roles": [
+            "anchor",
+            "buff"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "low"
+    },
+    {
+        "name": "Jäger",
+        "description": "Jäger peut aider son équipe à créer une forte position défensive avant de patrouiller sur la carte pour intercepter les assaillants spécialisés dans la prise en tenaille. Il est capable de détruire les projectiles en approche grâce à son gadget déployable unique : le système de défense active, ou ADS.",
+        "cover": "images/agents/defenders/JagerCover.png",
+        "icon": "images/agents/defenders/JagerLogo.png",
+        "roles": [
+            "roam",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "middle"
+    },
+    {
+        "name": "Bandit",
+        "description": "Efficace en anti-brèche lourde, patrouille et sécurisation, Bandit est capable d'empêcher les assaillants de franchir des points stratégiques et de défendre l'objectif tout en se déplaçant. Bandit peut électrifier différentes surfaces grâce à son aptitude spéciale : le Dispositif électrique rustique ou fil électrifié CED-1.",
+        "cover": "images/agents/defenders/BanditCover.png",
+        "icon": "images/agents/defenders/BanditLogo.png",
+        "roles": [
+            "antiHardBreach",
+            "roam",
+            "secure"
+        ],
+        "side": "defenders",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "low"
+    },
+    {
+        "name": "Blitz",
+        "description": "Bouclier balistique. Trois rangées de huit grenades flash fournissant de puissantes sources de lumière.",
+        "cover": "images/agents/attackers/BlitzCover.png",
+        "icon": "images/agents/attackers/BlitzLogo.png",
+        "roles": [
+            "antiRoam",
+            "crowdControl",
+            "frontLine",
+            "shield"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "high"
+    },
+    {
+        "name": "IQ",
+        "description": "Monté sur le poignet. Capteur en format téléphone.",
+        "cover": "images/agents/attackers/IQCover.png",
+        "icon": "images/agents/attackers/IQLogo.png",
+        "roles": [
+            "disable",
+            "flank",
+            "frontLine",
+            "intelGatherer"
+        ],
+        "side": "attackers",
+        "health": "low",
+        "speed": "high",
+        "difficulty": "high"
+    },
+    {
+        "name": "Fuze",
+        "description": "Fuze est plus efficace dans son rôle de déni de zone et s'il est agressif sur les flancs. Ses forces lui permettent de déployer des capacités défensives et de harceler les ennemis ancrés dans des positions défensives. Ses charges à sous-munitions APM-6 déclenchent un groupe de petites grenades explosives à travers les surfaces fragiles.",
+        "cover": "images/agents/attackers/FuzeCover.png",
+        "icon": "images/agents/attackers/FuzeLogo.png",
+        "roles": [
+            "areaDenial",
+            "disable",
+            "flank"
+        ],
+        "side": "attackers",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "low"
+    },
+    {
+        "name": "Glaz",
+        "description": "Glaz est un tireur d'élite opérant à distance. Il est capable de créer de petites ouvertures et d'effectuer des tirs de couverture. Il est redoutable depuis des positions éloignées grâce à sa lunette unique : le viseur amovible HDS.",
+        "cover": "images/agents/attackers/GlazCover.png",
+        "icon": "images/agents/attackers/GlazLogo.png",
+        "roles": [
+            "backLine",
+            "coveringFire",
+            "softBreach"
+        ],
+        "side": "attackers",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    },
+    {
+        "name": "Tachanka",
+        "description": "Le nouveau gadget de Tachanka, le lance-grenade Shumikha, est parfait pour bloquer les accès et pour couvrir les angles morts. Ses grenades incendiaires rebondissent plusieurs fois et leur détonateur ne s'active qu'après le premier rebond, ce qui les rend très polyvalentes. Tachanka possède 10 grenades en début de match et le lance-grenade a une capacité de 7 grenades maximum. Pour une plus grande efficacité, utilisez plusieurs grenades d'un coup pour couvrir une zone plus large et pour toucher un adversaire à coup sûr. Le rechargement se fait une grenade à la fois.",
+        "cover": "images/agents/defenders/TachankaCover.png",
+        "icon": "images/agents/defenders/TachankaLogo.png",
+        "roles": [
+            "anchor",
+            "coveringFire",
+            "shield"
+        ],
+        "side": "defenders",
+        "health": "high",
+        "speed": "low",
+        "difficulty": "low"
+    },
+    {
+        "name": "Kapkan",
+        "description": "Kapkan est un agent spécialisé dans les pièges, un atout mortel pour toute équipe de défenseurs. Kapkan est équipé d'un dispositif de blocage (EDD-MK II). Ce piège est en réalité une charge remplie de C4 qui s'active grâce à un système de détection de mouvements. Il peut être placé sur l'encadrement d'une porte ou d'une fenêtre afin de bloquer les points d'entrée des assaillants.",
+        "cover": "images/agents/defenders/KapkanCover.png",
+        "icon": "images/agents/defenders/KapkanLogo.png",
+        "roles": [
+            "trap"
+        ],
+        "side": "defenders",
+        "health": "middle",
+        "speed": "middle",
+        "difficulty": "low"
+    }
+]

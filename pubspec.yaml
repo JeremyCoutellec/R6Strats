@@ -24,6 +24,11 @@ flutter:
   uses-material-design: true  
   assets:
     - images/r6companionLogo.png
+    - images/agents/attackers/
+    - images/agents/defenders/
+    - images/utils/
+    - assets/mockAgents.json
+    
   fonts:
     - family: Raleway
       fonts:

@@ -4,25 +4,29 @@ import 'agent_show.dart';
 
 class AgentCardList extends StatelessWidget {
   final List<Agent> agents;
+  Agent? showViewAgent;
 
-  const AgentCardList({super.key, required this.agents});
+  AgentCardList({super.key, required this.agents, this.showViewAgent});
 
   @override
   Widget build(BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
+
     return GridView.builder(
         padding: const EdgeInsets.only(left: 20, right: 20),
-        gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: orientation == Orientation.landscape ? 6 : 3),
         itemBuilder: (context, index) => InkWell(
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) =>
-                    AgentShow(agent: agents[index]))),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        AgentShow(agent: agents[index]))),
             child: Card(
                 child: Column(children: <Widget>[
               AspectRatio(
-                aspectRatio: 1.4,
-                child: Image.network(agents[index].cover),
-              ),
+                  aspectRatio: 1.4,
+                  child: Image.asset(agents[index].icon ?? '')),
               Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
