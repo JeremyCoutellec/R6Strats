@@ -34,6 +34,7 @@ class _AgentCardListState extends State<AgentCardList> {
         allButtonText: 'Tous',
         listData: Agent.getFiltersSideAndRoles(),
         selectedListData: sideAndRolesSelected,
+        controlButtons: [],
         choiceChipBuilder: (context, item, isSelected) {
           String? label;
           if (item is Side) label = Agent.getStringOfSide(item);
@@ -81,7 +82,7 @@ class _AgentCardListState extends State<AgentCardList> {
               filteredAgents = widget.agents.where((agent) {
                 bool findSide = false;
                 bool testSide = false;
-                bool findRoles = false;
+                bool findRoles = true;
                 for (var element in list) {
                   if (element is Side) {
                     testSide = true;
@@ -89,8 +90,8 @@ class _AgentCardListState extends State<AgentCardList> {
                       findSide = agent.side == element;
                     }
                   }
-                  if (element is Roles) {
-                    findRoles = agent.roles.contains(element);
+                  if (element is Roles && !agent.roles.contains(element)) {
+                    findRoles = false;
                   }
                 }
                 return (!testSide || findSide) && findRoles;
@@ -102,37 +103,43 @@ class _AgentCardListState extends State<AgentCardList> {
       );
     }
 
-    filteredAgents = filteredAgents.isEmpty ? widget.agents : filteredAgents;
+    filteredAgents =
+        sideAndRolesSelected.isEmpty ? widget.agents : filteredAgents;
     return Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: openFilterDialog,
           child: const Icon(Icons.filter_list),
         ),
-        body: GridView.builder(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: orientation == Orientation.landscape ? 6 : 3),
-            itemBuilder: (context, index) => InkWell(
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            AgentShow(agent: filteredAgents[index]))),
-                child: Card(
-                    child: Column(children: <Widget>[
-                  AspectRatio(
-                      aspectRatio: 1.4,
-                      child: Image.asset(filteredAgents[index].icon ?? '')),
-                  Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.secondary,
-                      ),
-                      child: Padding(
-                          padding: const EdgeInsets.only(top: 4, bottom: 4),
-                          child: Text(filteredAgents[index].name,
-                              textAlign: TextAlign.center)))
-                ]))),
-            itemCount: filteredAgents.length));
+        body: (filteredAgents.isEmpty)
+            ? Center(
+                child: Text('Aucun agent ne correspond à ces filtres',
+                    style: TextStyle(color: Theme.of(context).primaryColor)))
+            : GridView.builder(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount:
+                        orientation == Orientation.landscape ? 6 : 3),
+                itemBuilder: (context, index) => InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                AgentShow(agent: filteredAgents[index]))),
+                    child: Card(
+                        child: Column(children: <Widget>[
+                      AspectRatio(
+                          aspectRatio: 1.4,
+                          child: Image.asset(filteredAgents[index].icon ?? '')),
+                      Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
+                          child: Padding(
+                              padding: const EdgeInsets.only(top: 4, bottom: 4),
+                              child: Text(filteredAgents[index].name,
+                                  textAlign: TextAlign.center)))
+                    ]))),
+                itemCount: filteredAgents.length));
   }
 }

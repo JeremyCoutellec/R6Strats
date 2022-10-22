@@ -156,7 +156,7 @@ class Agent {
   }
 
   static List<Object> getFiltersSideAndRoles() {
-    return [Side.attackers, ...Roles.values];
+    return [...Side.values, ...Roles.values];
   }
 
   static String? getStringOfRole(Roles? role) {
