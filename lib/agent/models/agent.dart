@@ -155,6 +155,10 @@ class Agent {
     }
   }
 
+  static List<Object> getFiltersSideAndRoles() {
+    return [Side.attackers, ...Roles.values];
+  }
+
   static String? getStringOfRole(Roles? role) {
     switch (role) {
       case Roles.intelGatherer:
