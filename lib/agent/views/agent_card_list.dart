@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:filter_list/filter_list.dart';
 
-import '../models/agent.dart';
+import '../agent_model.dart';
 import 'agent_show.dart';
 
 class AgentCardList extends StatefulWidget {
   final List<Agent> agents;
-  Agent? showViewAgent;
 
-  AgentCardList({super.key, required this.agents, this.showViewAgent});
+  AgentCardList({super.key, required this.agents});
 
   @override
   State<AgentCardList> createState() => _AgentCardListState();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/views/nav_bar.dart';
-import '../models/agent.dart';
+import '../agent_model.dart';
 
 class AgentShow extends StatelessWidget {
   final Agent agent;

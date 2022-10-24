@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:r6_companion/agent/views/agent_card_list.dart';
 
-import '../actions/agent.dart';
-import '../models/agent.dart';
+import 'agent_actions.dart';
+import 'agent_model.dart';
 
 class AgentController extends StatelessWidget {
-  const AgentController();
+  const AgentController({super.key});
 
   @override
   Widget build(BuildContext context) {
