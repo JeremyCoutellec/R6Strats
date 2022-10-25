@@ -14,6 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.5
   filter_list: ^1.0.2
+  motion_tab_bar_v2: ^0.2.3
 
 dev_dependencies:
   flutter_test:
@@ -29,16 +30,16 @@ flutter:
     - images/agents/defenders/
     - images/maps/Banque/
     - images/maps/Cafe/
-    - images/maps/Canal/
-    - images/maps/Chalet/
-    - images/maps/ClubHouse/
-    - images/maps/Consulat/
-    - images/maps/Frontiere/
-    - images/maps/Gratte-ciel/
-    - images/maps/Littoral/
-    - images/maps/Oregon/
-    - images/maps/Parc-Attraction/
-    - images/maps/Villa/
+    # - images/maps/Canal/
+    # - images/maps/Chalet/
+    # - images/maps/ClubHouse/
+    # - images/maps/Consulat/
+    # - images/maps/Frontiere/
+    # - images/maps/Gratte-ciel/
+    # - images/maps/Littoral/
+    # - images/maps/Oregon/
+    # - images/maps/Parc-Attraction/
+    # - images/maps/Villa/
     - images/utils/
     - assets/mockMaps.json
     - assets/mockAgents.json

@@ -3,7 +3,7 @@ enum Side {
   defenders,
 }
 
-enum Roles {
+enum Role {
   intelGatherer,
   areaDenial,
   coveringFire,
@@ -36,7 +36,7 @@ class Agent {
   String? _description;
   String? _cover;
   String? _icon;
-  List<Roles?> _roles = [];
+  List<Role?> _roles = [];
   Side? _side = Side.attackers;
   Health? _health = Health.middle;
   Speed? _speed = Speed.middle;
@@ -46,7 +46,7 @@ class Agent {
   String? get description => _description;
   String? get cover => _cover;
   String? get icon => _icon;
-  List<Roles?> get roles => _roles;
+  List<Role?> get roles => _roles;
   Side? get side => _side;
   Health? get health => _health;
   Speed? get speed => _speed;
@@ -81,7 +81,7 @@ class Agent {
         _cover = json['cover'],
         _icon = json['icon'],
         _roles = json['roles']
-            .map<Roles?>((role) => Agent.getRoleByJson(role))
+            .map<Role?>((role) => Agent.getRoleByJson(role))
             .toList(),
         _health = Agent.getHealthByJson(json['health']),
         _speed = Agent.getSpeedByJson(json['speed']),
@@ -99,7 +99,7 @@ class Agent {
         'difficulty': difficulty.toString(),
       };
 
-  static String? getStringOfSide(Side? side) {
+  static String? getStringBySide(Side? side) {
     switch (side) {
       case Side.attackers:
         return "Assaillant";
@@ -110,94 +110,151 @@ class Agent {
     }
   }
 
-  static Roles? getRoleByJson(role) {
+  static Role? getRoleByJson(role) {
     switch (role) {
       case "intelGatherer":
-        return Roles.intelGatherer;
+        return Role.intelGatherer;
       case "areaDenial":
-        return Roles.areaDenial;
+        return Role.areaDenial;
       case "coveringFire":
-        return Roles.coveringFire;
+        return Role.coveringFire;
       case "crowdControl":
-        return Roles.crowdControl;
+        return Role.crowdControl;
       case "anchor":
-        return Roles.anchor;
+        return Role.anchor;
       case "secure":
-        return Roles.secure;
+        return Role.secure;
       case "antiRoam":
-        return Roles.antiRoam;
+        return Role.antiRoam;
       case "roam":
-        return Roles.roam;
+        return Role.roam;
       case "buff":
-        return Roles.buff;
+        return Role.buff;
       case "softBreach":
-        return Roles.softBreach;
+        return Role.softBreach;
       case "disable":
-        return Roles.disable;
+        return Role.disable;
       case "backLine":
-        return Roles.backLine;
+        return Role.backLine;
       case "intelDenier":
-        return Roles.intelDenier;
+        return Role.intelDenier;
       case "frontLine":
-        return Roles.frontLine;
+        return Role.frontLine;
       case "hardBreach":
-        return Roles.hardBreach;
+        return Role.hardBreach;
       case "flank":
-        return Roles.flank;
+        return Role.flank;
       case "trap":
-        return Roles.trap;
+        return Role.trap;
       case "antiHardBreach":
-        return Roles.antiHardBreach;
+        return Role.antiHardBreach;
       case "shield":
-        return Roles.shield;
+        return Role.shield;
       default:
         return null;
     }
   }
 
-  static List<Object> getFiltersSideAndRoles() {
-    return [...Side.values, ...Roles.values];
+  static List<Object> getRolesBySide() {
+    return [...Side.values, ...Role.values];
   }
 
-  static String? getStringOfRole(Roles? role) {
+  static List<Role> getRolesBySides(List<Side> sides) =>
+      Role.values.where((element) {
+        if (sides.isEmpty || sides.length == Side.values.length) {
+          return true;
+        }
+        bool findSide = false;
+        for (var side in sides) {
+          Agent.getSideByRole(element).contains(side);
+        }
+        return findSide;
+      }).toList();
+
+  static List<Side> getSideByRole(Role? role) {
     switch (role) {
-      case Roles.intelGatherer:
+      case Role.intelGatherer:
+        return [Side.attackers, Side.defenders];
+      case Role.areaDenial:
+        return [Side.attackers, Side.defenders];
+      case Role.coveringFire:
+        return [Side.attackers, Side.defenders];
+      case Role.crowdControl:
+        return [Side.attackers, Side.defenders];
+      case Role.anchor:
+        return [Side.defenders];
+      case Role.secure:
+        return [Side.defenders];
+      case Role.antiRoam:
+        return [Side.attackers];
+      case Role.roam:
+        return [Side.defenders];
+      case Role.buff:
+        return [Side.attackers, Side.defenders];
+      case Role.softBreach:
+        return [Side.attackers, Side.defenders];
+      case Role.disable:
+        return [Side.attackers];
+      case Role.backLine:
+        return [Side.attackers];
+      case Role.intelDenier:
+        return [Side.attackers, Side.defenders];
+      case Role.frontLine:
+        return [Side.attackers, Side.defenders];
+      case Role.hardBreach:
+        return [Side.attackers];
+      case Role.flank:
+        return [Side.attackers];
+      case Role.trap:
+        return [Side.attackers, Side.defenders];
+      case Role.antiHardBreach:
+        return [Side.defenders];
+      case Role.shield:
+        return [Side.attackers, Side.defenders];
+      default:
+        return [Side.attackers, Side.defenders];
+    }
+  }
+
+  static String? getStringByRole(Role? role) {
+    switch (role) {
+      case Role.intelGatherer:
         return "Renseignements";
-      case Roles.areaDenial:
+      case Role.areaDenial:
         return "Blockage d'accès";
-      case Roles.coveringFire:
+      case Role.coveringFire:
         return "Tir de suppression";
-      case Roles.crowdControl:
+      case Role.crowdControl:
         return "Contrôle des foules";
-      case Roles.anchor:
+      case Role.anchor:
         return "Ancre";
-      case Roles.secure:
+      case Role.secure:
         return "Sécurisation";
-      case Roles.antiRoam:
+      case Role.antiRoam:
         return "Anti-Patrouille";
-      case Roles.roam:
+      case Role.roam:
         return "Patrouille";
-      case Roles.buff:
+      case Role.buff:
         return "Buff";
-      case Roles.softBreach:
+      case Role.softBreach:
         return "Brèche";
-      case Roles.disable:
+      case Role.disable:
         return "Neutralisation";
-      case Roles.backLine:
+      case Role.backLine:
         return "Arrière garde";
-      case Roles.intelDenier:
+      case Role.intelDenier:
         return "Contre renseignements";
-      case Roles.frontLine:
+      case Role.frontLine:
         return "Première ligne";
-      case Roles.hardBreach:
+      case Role.hardBreach:
         return "Brèche lourde";
-      case Roles.flank:
+      case Role.flank:
         return "Contournement";
-      case Roles.trap:
+      case Role.trap:
         return "Piège";
-      case Roles.antiHardBreach:
+      case Role.antiHardBreach:
         return "Anti-Brèche lourde";
-      case Roles.shield:
+      case Role.shield:
         return "Bouclier";
       default:
         return null;

@@ -141,8 +141,9 @@
         "cover": "images/agents/defenders/MelusiCover.png",
         "icon": "images/agents/defenders/MelusiLogo.png",
         "roles": [
-            "frontLine",
-            "hardBreach"
+            "crowdControl",
+            "intelGatherer",
+            "secure"
         ],
         "side": "defenders",
         "health": "low",

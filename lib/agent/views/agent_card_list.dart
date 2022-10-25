@@ -31,13 +31,13 @@ class _AgentCardListState extends State<AgentCardList> {
         applyButtonText: 'Filtrer',
         resetButtonText: 'Aucun',
         allButtonText: 'Tous',
-        listData: Agent.getFiltersSideAndRoles(),
+        listData: [...Side.values, ...Role.values],
         selectedListData: sideAndRolesSelected,
         controlButtons: [],
         choiceChipBuilder: (context, item, isSelected) {
           String? label;
-          if (item is Side) label = Agent.getStringOfSide(item);
-          if (item is Roles) label = Agent.getStringOfRole(item);
+          if (item is Side) label = Agent.getStringBySide(item);
+          if (item is Role) label = Agent.getStringByRole(item);
 
           Color color = Colors.grey[200]!;
           Color colorText = Colors.black;
@@ -58,15 +58,15 @@ class _AgentCardListState extends State<AgentCardList> {
               ));
         },
         choiceChipLabel: (object) {
-          if (object is Side) return Agent.getStringOfSide(object);
-          if (object is Roles) return Agent.getStringOfRole(object);
+          if (object is Side) return Agent.getStringBySide(object);
+          if (object is Role) return Agent.getStringByRole(object);
           return '';
         },
         validateSelectedItem: (list, val) => list!.contains(val),
         onItemSearch: (object, query) {
           String? search;
-          if (object is Side) search = Agent.getStringOfSide(object);
-          if (object is Roles) search = Agent.getStringOfRole(object);
+          if (object is Side) search = Agent.getStringBySide(object);
+          if (object is Role) search = Agent.getStringByRole(object);
           if (search is String) {
             return search.toLowerCase().contains(query.toLowerCase());
           }
@@ -89,7 +89,7 @@ class _AgentCardListState extends State<AgentCardList> {
                       findSide = agent.side == element;
                     }
                   }
-                  if (element is Roles && !agent.roles.contains(element)) {
+                  if (element is Role && !agent.roles.contains(element)) {
                     findRoles = false;
                   }
                 }
@@ -119,26 +119,45 @@ class _AgentCardListState extends State<AgentCardList> {
                     crossAxisCount:
                         orientation == Orientation.landscape ? 6 : 3),
                 itemBuilder: (context, index) => InkWell(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                AgentShow(agent: filteredAgents[index]))),
+                    onTap: () => showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return SimpleDialog(
+                              title: Row(
+                                children: [
+                                  Image.asset(
+                                    filteredAgents[index].icon ?? '',
+                                    height: 48,
+                                  ),
+                                  Text(filteredAgents[index].name)
+                                ],
+                              ),
+                              children: [
+                                AgentShow(agent: filteredAgents[index])
+                              ]);
+                        }),
                     child: Card(
+                        elevation: 4.0,
                         child: Column(children: <Widget>[
-                      AspectRatio(
-                          aspectRatio: 1.4,
-                          child: Image.asset(filteredAgents[index].icon ?? '')),
-                      Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.secondary,
+                          SizedBox(
+                            height: 77.0,
+                            child: Ink.image(
+                              image:
+                                  AssetImage(filteredAgents[index].icon ?? ''),
+                              fit: BoxFit.fitHeight,
+                            ),
                           ),
-                          child: Padding(
-                              padding: const EdgeInsets.only(top: 4, bottom: 4),
-                              child: Text(filteredAgents[index].name,
-                                  textAlign: TextAlign.center)))
-                    ]))),
+                          Container(
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: Text(filteredAgents[index].name,
+                                style: TextStyle(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .secondary),
+                                textAlign: TextAlign.center),
+                          ),
+                        ]))),
                 itemCount: filteredAgents.length));
   }
 }

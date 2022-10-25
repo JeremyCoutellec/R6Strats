@@ -6,23 +6,23 @@ import 'core/views/nav_bar.dart';
 import 'agent/agent_controller.dart';
 import 'map/map_r6_controller.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, this.title}) : super(key: key);
+class WikiPage extends StatefulWidget {
+  const WikiPage({Key? key, this.title}) : super(key: key);
 
   final String? title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _WikiPageState createState() => _WikiPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
+class _WikiPageState extends State<WikiPage> with TickerProviderStateMixin {
   TabController? _tabController;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(
-      initialIndex: 0,
+      initialIndex: 1,
       length: 2,
       vsync: this,
     );
