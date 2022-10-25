@@ -10,6 +10,7 @@ class MapShow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Orientation orientation = MediaQuery.of(context).orientation;
     return DefaultTabController(
         initialIndex: 0,
         length: map.views.length,
@@ -32,9 +33,9 @@ class MapShow extends StatelessWidget {
                           maxScale: 2,
                           child: Padding(
                               padding: const EdgeInsets.all(20),
-                              child: Image.network(
+                              child: Image.asset(
                                 view?.image ?? '',
-                                fit: BoxFit.fitHeight,
+                                fit: BoxFit.contain,
                               ))))
                       .toList())),
         ));

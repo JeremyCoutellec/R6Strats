@@ -19,36 +19,31 @@ class _MapCardListState extends State<MapCardList> {
     Orientation orientation = MediaQuery.of(context).orientation;
 
     return Scaffold(
-        body: (widget.maps.isEmpty)
-            ? Center(
-                child: Text('Aucune map ne correspond à ces filtres',
-                    style: TextStyle(color: Theme.of(context).primaryColor)))
-            : GridView.builder(
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount:
-                        orientation == Orientation.landscape ? 6 : 3),
-                itemBuilder: (context, index) => InkWell(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                MapShow(map: widget.maps[index]))),
-                    child: Card(
-                        child: Column(children: <Widget>[
-                      AspectRatio(
-                          aspectRatio: 1.4,
-                          child: Image.asset(widget.maps[index].icon ?? '')),
-                      Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.secondary,
-                          ),
-                          child: Padding(
-                              padding: const EdgeInsets.only(top: 4, bottom: 4),
-                              child: Text(widget.maps[index].name,
-                                  textAlign: TextAlign.center)))
-                    ]))),
-                itemCount: widget.maps.length));
+        body: GridView.builder(
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: orientation == Orientation.landscape ? 4 : 2),
+            itemBuilder: (context, index) => InkWell(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            MapShow(map: widget.maps[index]))),
+                child: Card(
+                    child: Column(children: <Widget>[
+                  AspectRatio(
+                      aspectRatio: 1.4,
+                      child: Image.asset(widget.maps[index].icon ?? '')),
+                  Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
+                      child: Padding(
+                          padding: const EdgeInsets.only(top: 4, bottom: 4),
+                          child: Text(widget.maps[index].name,
+                              textAlign: TextAlign.center)))
+                ]))),
+            itemCount: widget.maps.length));
   }
 }

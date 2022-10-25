@@ -43,9 +43,11 @@ class MapR6 {
         _icon = json['icon'],
         _location = json['location'],
         _views = json['views']
-            .map<ViewFloor>((element) => ViewFloor.fromJson(element)),
+            .map<ViewFloor?>((element) => ViewFloor.fromJson(element))
+            .toList(),
         _bombes = json['bombes']
-            .map<ViewBombe>((element) => ViewBombe.fromJson(element));
+            .map<ViewBombe?>((element) => ViewBombe.fromJson(element))
+            .toList();
 
   Map<String, dynamic> toJson() => {
         "name": name,

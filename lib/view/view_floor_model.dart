@@ -14,11 +14,11 @@ class ViewFloor {
   }
 
   ViewFloor.fromJson(Map<String, dynamic> json)
-      : _floor = int.parse(json['floor']),
+      : _floor = json['floor'],
         _image = json['image'];
 
   Map<String, dynamic> toJson() => {
-        'name': floor.toString(),
+        'floor': floor,
         'image': image,
       };
 

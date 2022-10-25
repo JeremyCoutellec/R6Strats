@@ -22,7 +22,7 @@ class ViewBombe {
   }
 
   ViewBombe.fromJson(Map<String, dynamic> json)
-      : _floor = int.parse(json['floor']),
+      : _floor = json['floor'],
         _locationA = json['locationA'],
         _locationB = json['locationB'],
         _image = json['image'];
