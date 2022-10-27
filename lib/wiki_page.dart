@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
-import 'package:motion_tab_bar_v2/motion-badge.widget.dart';
 
 import 'core/views/nav_bar.dart';
 import 'agent/agent_controller.dart';

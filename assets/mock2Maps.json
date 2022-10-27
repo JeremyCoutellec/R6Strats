@@ -1,0 +1,96 @@
+[
+    {
+        "name": "Banque",
+        "description": "L'équipe Rainbow a été appelée pour assiéger une banque d'importance majeure. Cette carte confère aux assaillants la sensation de progresser vers des zones toujours plus fortifiées du bâtiment.",
+        "createdAt": "2015",
+        "icon": "images/maps/Banque/BanqueLogo.jpg",
+        "location": "Los angeles, Californie",
+        "views": [
+            {
+                "floor": -1,
+                "image": "images/maps/Banque/BanqueSS.jpg"
+            },
+            {
+                "floor": 0,
+                "image": "images/maps/Banque/BanqueRDC.jpg"
+            },
+            {
+                "floor": 1,
+                "image": "images/maps/Banque/Banque1er.jpg"
+            }
+        ],
+        "bombes": [
+            {
+                "floor": -1,
+                "locationA": "Vestiaire",
+                "locationB": "Salle de surveillance",
+                "image": "images/maps/Banque/BanqueSS_Vestiaire_Surveillance.jpg"
+            },
+            {
+                "floor": 0,
+                "locationA": "Open space",
+                "locationB": "Salle du personnel",
+                "image": "images/maps/Banque/BanqueRDC_Openspace_Personnel.jpg"
+            },
+            {
+                "floor": 0,
+                "locationA": "Guichet",
+                "locationB": "Archives",
+                "image": "images/maps/Banque/BanqueRDC_Guichet_Archives.jpg"
+            },
+            {
+                "floor": 1,
+                "locationA": "Salon exécutif",
+                "locationB": "Bureau du PDG",
+                "image": "images/maps/Banque/Banque1er_Salon_Bureau.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Café Dostoyevsky",
+        "description": "Ce café chic du centre-ville de Moscou est le summum de l'extravagance et du glamour... et un terrain d'intervention naturel pour les Spetsnaz. La destruction d'un décor riche, chic et classique sera un élément clé de cette carte.",
+        "createdAt": "2015",
+        "icon": "images/maps/Cafe/CafeLogo.jpg",
+        "location": "Moscou, Russie",
+        "views": [
+            {
+                "floor": 0,
+                "image": "images/maps/Cafe/CafeRDC.jpg"
+            },
+            {
+                "floor": 1,
+                "image": "images/maps/Cafe/Cafe1er.jpg"
+            },
+            {
+                "floor": 2,
+                "image": "images/maps/Cafe/Cafe2e.jpg"
+            }
+        ],
+        "bombes": [
+            {
+                "floor": 0,
+                "locationA": "Service",
+                "locationB": "Cuisine",
+                "image": "images/maps/Cafe/CafeRDC_Service_Cuisine.jpg"
+            },
+            {
+                "floor": 1,
+                "locationA": "Hall avec cheminée",
+                "locationB": "Salle de la mine",
+                "image": "images/maps/Cafe/Cafe1er_Hall_Mine.jpg"
+            },
+            {
+                "floor": 1,
+                "locationA": "Salle de lecture",
+                "locationB": "Hall avec cheminée",
+                "image": "images/maps/Cafe/Cafe1er_Lecture_Hall.jpg"
+            },
+            {
+                "floor": 2,
+                "locationA": "Bar",
+                "locationB": "Bar à cocktails",
+                "image": "images/maps/Cafe/Cafe2e_BarCocktails.jpg"
+            }
+        ]
+    }
+]

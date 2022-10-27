@@ -12,16 +12,16 @@ class NavBar extends AppBar {
       : super(
             title: Row(children: [
               Image.asset(
-                'images/r6companionLogo.png',
+                'images/r6companionLogoAlt.png',
                 height: 23,
               ),
               Text(titleNavBar ?? 'R6 Strats Builder',
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                  style: const TextStyle(
+                    color: Colors.white,
                   ))
             ]),
             centerTitle: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Theme.of(context).primaryColor,
             bottom: bottomNavbar,
             actions: []);
 }
